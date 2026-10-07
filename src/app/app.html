@@ -1,0 +1,33 @@
+<div class="hotel-container">
+
+  <h1>BLUE SKY HOTEL</h1>
+  <h2>Hotel Booking System</h2>
+
+  <div class="booking-card">
+
+    <label>Customer Name</label>
+    <input type="text" [(ngModel)]="customerName" placeholder="Enter your name">
+
+    <label>Phone</label>
+    <input type="text" [(ngModel)]="phone" placeholder="Enter phone number">
+
+    <label>Room Type</label>
+    <select [(ngModel)]="roomType">
+      <option value="">Select Room</option>
+      <option value="Standard">Standard</option>
+      <option value="Deluxe">Deluxe</option>
+    </select>
+
+    <label>Check-In</label>
+    <input type="date" [(ngModel)]="checkIn">
+
+    <label>Check-Out</label>
+    <input type="date" [(ngModel)]="checkOut">
+
+    <button (click)="confirmBooking()">Confirm Booking</button>
+
+    <h3 *ngIf="booked">Booking Confirmed!</h3>
+
+  </div>
+
+</div>
